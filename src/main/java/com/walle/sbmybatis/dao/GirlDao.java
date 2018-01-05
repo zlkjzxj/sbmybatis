@@ -1,8 +1,10 @@
 package com.walle.sbmybatis.dao;
 
+
 import com.walle.sbmybatis.bean.Girl;
-import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 /**
  * Created by walle
@@ -10,14 +12,12 @@ import org.springframework.stereotype.Component;
  * good good study,day day up!
  */
 @Component
-public class GirlDao {
-    private final SqlSession sqlSession;
+public interface GirlDao {
+    public Girl selectGirlById(int id);
 
-    public GirlDao(SqlSession sqlSession) {
-        this.sqlSession = sqlSession;
-    }
+    public List<Girl> getGirlList();
 
-    public Girl selectGirlById(int id) {
-        return this.sqlSession.selectOne("selectGirlById", id);
-    }
+    public int insertAGirl(Girl girl);
+
+    public int updateAGirl(Girl girl);
 }
