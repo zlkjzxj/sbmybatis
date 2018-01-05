@@ -1,0 +1,4 @@
+#yml 和properties的区别在于更加直观，他是自己的以一种语言格式
+spring:
+  profiles:
+    active: dev

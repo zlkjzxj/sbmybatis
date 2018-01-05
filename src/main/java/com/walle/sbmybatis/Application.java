@@ -15,12 +15,12 @@ import javax.annotation.Resource;
 @Controller
 @SpringBootApplication
 @MapperScan("com.walle.sbmybatis.dao")//这个扫描的是dao连接mapper
-public class SbmybatisApplication implements CommandLineRunner {
+public class Application implements CommandLineRunner {
 
-    Logger logger = LoggerFactory.getLogger(SbmybatisApplication.class);
+    Logger logger = LoggerFactory.getLogger(Application.class);
 
     public static void main(String[] args) {
-        SpringApplication.run(SbmybatisApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 
     @Resource
